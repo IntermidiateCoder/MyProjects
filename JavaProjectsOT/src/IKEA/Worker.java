@@ -1,18 +1,39 @@
 package IKEA;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 public class Worker {
-	private Date startingDate;
+	private LocalDate startingDate;
 	private String name;
 	private String section;
 	private double salary;
-	public Worker(Date startingDate, String name, String section, double salary) {
+	private double incRate;
+	public Worker(LocalDate startingDate, String name, String section, double salary) {
 		this.startingDate = startingDate;
 		this.name = name;
 		this.section = section;
 		this.salary = salary;
+		this.incRate = 1.02;
 	}
-	public void increaseSalary() {
-		setSalary(this.salary * 1.02);
+	public Worker(String name, String section, double salary) {
+		this.startingDate = LocalDate.now();
+		this.name = name;
+		this.section = section;
+		this.salary = salary;
+		this.incRate = 1.02;
+	}
+	public double getIncRate() {
+		return incRate;
+	}
+	public void setIncRate(double incRate) {
+		this.incRate = incRate;
+	}
+	public void requestIncreaseSalary() {
+		LocalDate today = LocalDate.now();
+		LocalDate startDate = this.startingDate;
+		if(startDate.getDayOfMonth() == today.getDayOfMonth() && 
+				startDate.getMonth() == today.getMonth() && 
+				startDate.getYear() < today.getYear())
+			setSalary(this.salary * this.incRate);
 	}
 	public String helpCustomer() {
 		return "What do you need?";
@@ -30,13 +51,14 @@ public class Worker {
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
-	public Date getStartingDate() {
+	public LocalDate getStartingDate() {
 		return startingDate;
 	}
 	public String getName() {
 		return name;
 	}
 	public String toString() {
-		return "Worker: " + this.name + " Starting Date: " + this.startingDate + " Salary: " + this.salary  + " Section: " + this.section;
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+		return "Worker: " + this.name + " Starting Date: " + dtf.format(this.startingDate) + " Salary: " + this.salary  + " Section: " + this.section;
 	}
 }
