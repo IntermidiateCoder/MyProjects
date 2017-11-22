@@ -1,4 +1,4 @@
-package IKEA;
+package IKEA.Tests;
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,6 +6,8 @@ import java.time.LocalDate;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import IKEA.SalesMan;
 
 public class TestSalesMan {
 		private SalesMan s1;

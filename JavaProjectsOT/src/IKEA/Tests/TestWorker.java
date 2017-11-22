@@ -1,7 +1,10 @@
-package IKEA;
+package IKEA.Tests;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
+
+import IKEA.Worker;
+
 import java.time.LocalDate;
 
 public class TestWorker {
