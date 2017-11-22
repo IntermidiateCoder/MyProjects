@@ -31,8 +31,8 @@ public class Worker {
 		LocalDate today = LocalDate.now();
 		LocalDate startDate = this.startingDate;
 		if(startDate.getDayOfMonth() == today.getDayOfMonth() && 
-				startDate.getMonth() == today.getMonth() && 
-				startDate.getYear() < today.getYear())
+		startDate.getMonth() == today.getMonth() && 
+		startDate.getYear() < today.getYear())
 			setSalary(this.salary * this.incRate);
 	}
 	public String helpCustomer() {

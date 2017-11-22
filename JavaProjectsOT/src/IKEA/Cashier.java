@@ -13,5 +13,4 @@ public class Cashier extends Worker {
 		this.setIncRate(1.1);
 	}
 
-
 }
