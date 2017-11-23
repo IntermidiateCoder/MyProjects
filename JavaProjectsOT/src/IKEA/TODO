@@ -1,14 +1,14 @@
 Cashier: what does he do????
-	1. charge(Item...args) // charges customer 
-	2. order(Item...args) // orders item for customer request
-	3. openCashRegister() // makes line available for customers to come
-	4. closeCashRegister() // make line unavailable
+	1. charge(Item...args) // void: charges customer 
+	2. order(Item...args) // void: orders item for customer request
+	3. openCashRegister() // void: makes line available for customers to come
+	4. closeCashRegister() // void: make line unavailable
 Tutor:
-	1. guideCustomer(String request) - guides Customer to requested section
+	1. guideCustomer(String request)// void: guides Customer to requested section
 
 SalesMan:
 	1. convincePotentialCustomer(String phoneNumber) //void: random chance to get new customer
-  2. convinceCustomerToBuy(String phonenumber) // 
+  	2. convinceCustomerToBuy(String phonenumber) // void:
 Chef:
 	1. Cook methods - set of actions to cook request food
-	2. claimReady(Food...args) - announces to the cashier the food is ready for serving
+	2. claimReady(Food...args) // boolean: announces to the cashier the food is ready for serving
