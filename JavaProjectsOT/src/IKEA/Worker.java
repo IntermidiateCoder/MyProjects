@@ -57,6 +57,7 @@ public class Worker {
 	public String getName() {
 		return name;
 	}
+	@Override
 	public String toString() {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
 		return "Worker: " + this.name + " Starting Date: " + dtf.format(this.startingDate) + " Salary: " + this.salary  + " Section: " + this.section;

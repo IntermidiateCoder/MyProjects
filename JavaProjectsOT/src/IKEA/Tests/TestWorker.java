@@ -16,7 +16,8 @@ public class TestWorker {
 	
 	@Before
 	public void setUp() throws Exception{
-		w1 = new Worker(LocalDate.of(2016, 11, 22), "tamir", "jimbory", 1500.00);
+		w1 = new Worker(LocalDate.of(2016, LocalDate.now().getMonth(), 
+				LocalDate.now().getDayOfMonth()), "tamir", "jimbory", 1500.00);
 		w2 = new Worker(LocalDate.of(2000, 10, 20), "Ofek", "jimbory", 15.25);
 		w3 = new Worker(LocalDate.of(2005, 9, 5), "Dani", "Prostitue(Hoeing) Section", 19992.505);
 		w4 = new Worker("Ido", "Sales Department", 2.0);

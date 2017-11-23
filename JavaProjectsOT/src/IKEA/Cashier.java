@@ -12,5 +12,16 @@ public class Cashier extends Worker {
 		super(startingDate, name, "Cash Register Section", 4850);
 		this.setIncRate(1.1);
 	}
-
+	public void charge(Customer cust, Item...items) {
+		throw new java.lang.UnsupportedOperationException();
+	}
+	public void openCashRegister() {
+		throw new java.lang.UnsupportedOperationException();
+	}
+	public void closeCashRegister() {
+		throw new java.lang.UnsupportedOperationException();
+	}
+	public void order(Customer cust, Item...items) {
+		throw new java.lang.UnsupportedOperationException();
+	} 
 }

@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
 
+import IKEA.Chef;
 import IKEA.Tutor;
 
 public class TestTutor {
@@ -17,7 +18,8 @@ public class TestTutor {
 	private Tutor c5;
 	@Before
 	public void setUp() throws Exception {
-		c1 = new Tutor(LocalDate.of(2016, 11, 22), "name1", "jimbory");
+		c1 = new Tutor(LocalDate.of(2016, LocalDate.now().getMonth(), 
+				LocalDate.now().getDayOfMonth()), "tamir", "Section B");
 		c2 = new Tutor(LocalDate.of(2000, 10, 20), "name2", "Kitchen Section");
 		c3 = new Tutor(LocalDate.of(2005, 9, 5), "name3", "Sales Department");
 		c4 = new Tutor("name4", "4");

@@ -1,4 +1,4 @@
-Cashier: what does he do????
+Cashier:
 	1. charge(Item...args) // void: charges customer 
 	2. order(Item...args) // void: orders item for customer request
 	3. openCashRegister() // void: makes line available for customers to come
