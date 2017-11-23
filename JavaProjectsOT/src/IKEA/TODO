@@ -1,0 +1,14 @@
+Cashier: what does he do????
+	1. charge(Item...args) // charges customer 
+	2. order(Item...args) // orders item for customer request
+	3. openCashRegister() // makes line available for customers to come
+	4. closeCashRegister() // make line unavailable
+Tutor:
+	1. guideCustomer(String request) - guides Customer to requested section
+
+SalesMan:
+	1. convincePotentialCustomer(String phoneNumber) //void: random chance to get new customer
+  2. convinceCustomerToBuy(String phonenumber) // 
+Chef:
+	1. Cook methods - set of actions to cook request food
+	2. claimReady(Food...args) - announces to the cashier the food is ready for serving
