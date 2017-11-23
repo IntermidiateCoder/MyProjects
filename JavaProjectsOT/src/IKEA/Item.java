@@ -1,7 +1,8 @@
 package IKEA;
 
 public class Item {
-	private String itemID;
+	// Item ID: first character represents the section of the item and the rest its serial number 
+	private String itemID;	   
 	private String name;
 	private double price;
 	public Item(int itemID, String name, double price, char sectionID) {

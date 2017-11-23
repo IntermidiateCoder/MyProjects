@@ -6,6 +6,7 @@ public class Worker {
 	private String name;
 	private String section;
 	private double salary;
+	// the rate salary increases.
 	private double incRate;
 	public Worker(LocalDate startingDate, String name, String section, double salary) {
 		this.startingDate = startingDate;
@@ -30,6 +31,8 @@ public class Worker {
 	public void requestIncreaseSalary() {
 		LocalDate today = LocalDate.now();
 		LocalDate startDate = this.startingDate;
+		// if today's day and month are equal to the workers day and month of when he started working
+		// increase his salary by the fixed increase rate.
 		if(startDate.getDayOfMonth() == today.getDayOfMonth() && 
 		startDate.getMonth() == today.getMonth() && 
 		startDate.getYear() < today.getYear())

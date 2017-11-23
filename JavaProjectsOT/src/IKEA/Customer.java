@@ -1,8 +1,13 @@
 package IKEA;
 
+import java.util.regex.*;
+
+
+@SuppressWarnings("unused") // didn't use regular expression for isPhoneNumberReal yet.
 public class Customer {
 	public Customer(String name, double balance, String pn) {
-		this.setPhoneNumber(pn);
+		if(this.isPhoneNumReal(pn))
+			this.setPhoneNumber(pn);
 		this.name = name;
 		this.balance = balance;
 	}

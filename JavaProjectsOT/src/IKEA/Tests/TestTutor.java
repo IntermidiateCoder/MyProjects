@@ -7,7 +7,6 @@ import java.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
 
-import IKEA.Chef;
 import IKEA.Tutor;
 
 public class TestTutor {
@@ -27,7 +26,7 @@ public class TestTutor {
 	}
 
 	@Test
-	public void test() {
+	public void testRequestIncreaseSalary() {
 		c1.requestIncreaseSalary();
 		c2.requestIncreaseSalary();
 		c3.requestIncreaseSalary();

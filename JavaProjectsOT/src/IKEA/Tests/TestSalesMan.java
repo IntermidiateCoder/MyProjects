@@ -7,7 +7,6 @@ import java.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
 
-import IKEA.Chef;
 import IKEA.SalesMan;
 
 public class TestSalesMan {
@@ -27,7 +26,7 @@ public class TestSalesMan {
 		}
 
 		@Test
-		public void test() {
+		public void testRequestIncreaseSalary() {
 			s1.requestIncreaseSalary();
 			s2.requestIncreaseSalary();
 			s3.requestIncreaseSalary();

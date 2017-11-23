@@ -8,7 +8,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import IKEA.Chef;
-import IKEA.Worker;
 
 public class TestChef {
 	private Chef c1;
@@ -27,7 +26,7 @@ public class TestChef {
 	}
 
 	@Test
-	public void test() {
+	public void testRequestIncreaseSalary() {
 		c1.requestIncreaseSalary();
 		c2.requestIncreaseSalary();
 		c3.requestIncreaseSalary();
