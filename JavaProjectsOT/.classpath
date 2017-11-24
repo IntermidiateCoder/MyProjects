@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-<<<<<<< HEAD
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-9">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Junit4/junit-4.12.jar"/>
+	<classpathentry kind="src" path=""/>
 	<classpathentry kind="lib" path="C:/Junit4/hamcrest-core-1.3.jar"/>
-=======
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
-	<classpathentry kind="lib" path="C:/Users/snapg/Downloads/junit-4.12.jar"/>
-	<classpathentry kind="lib" path="C:/Users/snapg/Downloads/hamcrest-core-1.3.jar"/>
->>>>>>> branch 'master' of https://github.com/grobek/JavaProjectsOT.git
+	<classpathentry kind="lib" path="C:/Junit4/junit-4.12.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
