@@ -21,7 +21,9 @@ public class Cashier extends Worker {
 	public void closeCashRegister() {
 		throw new java.lang.UnsupportedOperationException();
 	}
-	public void order(Customer cust, Item...items) { // TODO
-		throw new java.lang.UnsupportedOperationException();
+	public void order(Customer cust, Item...items) { // DONE
+		for(Item orderedItem : items) {
+			cust.setBalance(cust.getBalance() - orderedItem.getPrice());
+		}
 	} 
 }
