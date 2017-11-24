@@ -12,7 +12,7 @@ public class SalesMan extends Worker {
 		super(startingDate, name, "Sales Department", 12500);
 		this.setIncRate(1.2);
 	}
-	public void convincePotentialCustomer(String phoneNumber) {
+	public void convincePotentialCustomer(String phoneNumber) { // TODO
 		throw new java.lang.UnsupportedOperationException();
 	}
 	public void convinceCustomer(Customer cust) {

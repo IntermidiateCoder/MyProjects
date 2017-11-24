@@ -3,10 +3,9 @@ package IKEA;
 import java.util.regex.*;
 
 
-@SuppressWarnings("unused") // didn't use regular expression for isPhoneNumberReal yet.
 public class Customer {
 	public Customer(String name, double balance, String pn) {
-		if(this.isPhoneNumReal(pn))
+		if(Customer.isPhoneNumReal(pn))
 			this.setPhoneNumber(pn);
 		this.name = name;
 		this.balance = balance;
@@ -32,8 +31,17 @@ public class Customer {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	public boolean isPhoneNumReal(String phoneNumber) {
-		throw new java.lang.UnsupportedOperationException();
+	public static boolean isPhoneNumReal(String phoneNumber) {
+		Pattern pattern = Pattern.compile("^(1\\-)?[0-9]{3}\\-?[0-9]{3}\\-?[0-9]{4}$");
+		Matcher matcher;
+		try {
+			matcher = pattern.matcher(phoneNumber);
+		} catch (NullPointerException e) {
+			return false;
+		} 
+		if(matcher.matches())
+			return true;
+		return false;
 	}
 	@Override
 	public String toString() {
