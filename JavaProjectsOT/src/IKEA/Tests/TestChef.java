@@ -17,7 +17,8 @@ public class TestChef {
 	private Chef c5;
 	@Before
 	public void setUp() throws Exception {
-		c1 = new Chef(LocalDate.of(2016, 11, 22), "name1");
+		c1 = new Chef(LocalDate.of(2016, LocalDate.now().getMonth(), 
+				LocalDate.now().getDayOfMonth()), "tamir");
 		c2 = new Chef(LocalDate.of(2000, 10, 20), "name2");
 		c3 = new Chef(LocalDate.of(2005, 9, 5), "name3");
 		c4 = new Chef("name4");
@@ -25,7 +26,7 @@ public class TestChef {
 	}
 
 	@Test
-	public void test() {
+	public void testRequestIncreaseSalary() {
 		c1.requestIncreaseSalary();
 		c2.requestIncreaseSalary();
 		c3.requestIncreaseSalary();

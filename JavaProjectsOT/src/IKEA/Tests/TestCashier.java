@@ -17,7 +17,8 @@ public class TestCashier {
 	private Cashier c5;
 	@Before
 	public void setUp() throws Exception {
-		c1 = new Cashier(LocalDate.of(2016, 11, 22), "tamir");
+		c1 = new Cashier(LocalDate.of(2016, LocalDate.now().getMonth(), 
+				LocalDate.now().getDayOfMonth()), "tamir");
 		c2 = new Cashier(LocalDate.of(2000, 10, 20), "Ofek");
 		c3 = new Cashier(LocalDate.of(2005, 9, 5), "Dani Svi");
 		c4 = new Cashier("Ido");
@@ -25,7 +26,7 @@ public class TestCashier {
 	}
 
 	@Test
-	public void test() {
+	public void testRequestIncreaseSalary() {
 		c1.requestIncreaseSalary();
 		c2.requestIncreaseSalary();
 		c3.requestIncreaseSalary();

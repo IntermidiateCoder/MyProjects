@@ -10,5 +10,8 @@ public class Tutor extends Worker{
 		super(startingDate, name, section, 5300);
 		this.setIncRate(1.15);
 	}
+	public void guideCustomer(String request) {
+		throw new java.lang.UnsupportedOperationException();
+	}
 	
 }

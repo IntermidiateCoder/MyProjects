@@ -17,7 +17,8 @@ public class TestSalesMan {
 		private SalesMan s5;
 		@Before
 		public void setUp() throws Exception {
-			s1 = new SalesMan(LocalDate.of(2016, 11, 22), "tamir");
+			s1 = new SalesMan(LocalDate.of(2016, LocalDate.now().getMonth(), 
+					LocalDate.now().getDayOfMonth()), "tamir");
 			s2 = new SalesMan(LocalDate.of(2000, 10, 20), "Ofek");
 			s3 = new SalesMan(LocalDate.of(2005, 9, 5), "Dani Svi");
 			s4 = new SalesMan("Ido");
@@ -25,7 +26,7 @@ public class TestSalesMan {
 		}
 
 		@Test
-		public void test() {
+		public void testRequestIncreaseSalary() {
 			s1.requestIncreaseSalary();
 			s2.requestIncreaseSalary();
 			s3.requestIncreaseSalary();
