@@ -43,12 +43,13 @@ public class Customer {
 			return true;
 		return false;
 	}
+	
+	public void decBalance(int amount) {
+		this.setBalance(this.getBalance() - amount);
+	}
 	@Override
 	public String toString() {
 		return "Customer [name=" + name + ", balance=" + balance + 
 				", Phone number: " + this.phoneNumber + "]";
-	}
-	public void decBalance(int amount) {
-		this.setBalance(this.getBalance() - amount);
 	}
 }

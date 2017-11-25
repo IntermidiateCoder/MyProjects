@@ -12,7 +12,7 @@ public class Cashier extends Worker {
 		super(startingDate, name, "Cash Register Section", 4850);
 		this.setIncRate(1.1);
 	}
-	public void charge(Customer cust, Item...items) { // DONE
+	public void charge(Customer cust, Item...items) { 
 		int totalCost = 0;
 		for(Item orderedItem : items) {
 			totalCost += orderedItem.getPrice();
