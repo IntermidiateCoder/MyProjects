@@ -44,7 +44,7 @@ public class Customer {
 		return false;
 	}
 	
-	public void decBalance(int amount) {
+	public void decBalance(int amount) { 
 		this.setBalance(this.getBalance() - amount);
 	}
 	@Override
