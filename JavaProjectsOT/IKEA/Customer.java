@@ -22,7 +22,7 @@ public class Customer {
 	public double getBalance() {
 		return balance;
 	}
-	public void setBalance(double balance) {
+	private void setBalance(double balance) {
 		this.balance = balance;
 	}
 	public String getPhoneNumber() {
