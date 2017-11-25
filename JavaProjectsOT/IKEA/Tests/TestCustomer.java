@@ -21,6 +21,8 @@ public class TestCustomer {
 		c3 = new Customer("Josh", 1250, "054515-3681" );
 		c4 = new Customer("Josh", 1250, "A54-525-3681" );
 		c5 = new Customer("Josh", 1250, "054-52536981" );
+		c1.decBalance(100);
+		c2.incBalance(100);
 	}
 
 	@Test
@@ -33,6 +35,8 @@ public class TestCustomer {
 		assertFalse(Customer.isPhoneNumReal("aswfafa"));
 		assertFalse(Customer.isPhoneNumReal("123456789"));
 		assertFalse(Customer.isPhoneNumReal("052-676a4432"));
+		assertEquals(c1.getBalance(), 1150 , 0);
+		assertEquals(c2.getBalance(), 1350, 0);
 	}
 
 }

@@ -48,6 +48,10 @@ public class Customer {
 		this.setBalance(this.getBalance() - amount);
 	}
 	
+	public void incBalance(int amount) { 
+		this.setBalance(this.getBalance() + amount);
+	}
+	
 	@Override
 	public String toString() {
 		return "Customer [name=" + name + ", balance=" + balance + 
