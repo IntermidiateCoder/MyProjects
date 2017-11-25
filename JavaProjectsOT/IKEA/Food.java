@@ -30,7 +30,7 @@ public class Food {
 	}
 	@Override
 	public String toString() {
-		return "Food [name=" + name + ", buyPrice=" + buyPrice + ", madeAt=" + madeAt + ", freshUntil=" + freshUntil
+		return "Food [name = " + name + ", buyPrice = " + buyPrice + ", madeAt = " + madeAt + ", freshUntil = " + freshUntil
 				+ "]";
 	}
 	
