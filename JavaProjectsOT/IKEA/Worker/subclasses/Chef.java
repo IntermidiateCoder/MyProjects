@@ -1,5 +1,7 @@
-package IKEA;
+package IKEA.Worker.subclasses;
 import java.time.LocalDate;
+
+import IKEA.Worker.Worker;
 
 public class Chef extends Worker{
 	public Chef(String name) {

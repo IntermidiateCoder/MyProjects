@@ -1,6 +1,11 @@
-package IKEA;
+package IKEA.Worker.subclasses;
 
 import java.time.LocalDate;
+
+import IKEA.CashRegister;
+import IKEA.Customer;
+import IKEA.Item.Item;
+import IKEA.Worker.Worker;
 
 public class Cashier extends Worker {
 	private CashRegister cr;
@@ -26,8 +31,8 @@ public class Cashier extends Worker {
 			cust.decBalance(totalCost);
 		}
 	}
-	public CashRegister openCashRegister() {
-		throw new java.lang.UnsupportedOperationException();
+	public void openCashRegister() {
+		cr.setFree(true);
 	}
 	public CashRegister getCashRegister() {
 		return cr;
@@ -36,7 +41,7 @@ public class Cashier extends Worker {
 		this.cr = cr;
 	}
 	public void closeCashRegister() {
-		throw new java.lang.UnsupportedOperationException();
+		cr.setFree(false);
 	}
 	public void order(Customer cust, Item...items) { // TODO. 
 		throw new java.lang.UnsupportedOperationException();

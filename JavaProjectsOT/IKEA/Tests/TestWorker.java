@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import IKEA.Worker;
+import IKEA.Worker.Worker;
 
 import java.time.LocalDate;
 

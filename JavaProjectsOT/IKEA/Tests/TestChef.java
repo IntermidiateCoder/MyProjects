@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
 
-import IKEA.Chef;
+import IKEA.Worker.subclasses.Chef;
 
 public class TestChef {
 	private Chef c1;

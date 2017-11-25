@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
 
-import IKEA.SalesMan;
+import IKEA.Worker.subclasses.SalesMan;
 
 public class TestSalesMan {
 		private SalesMan s1;
