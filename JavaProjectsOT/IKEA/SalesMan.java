@@ -2,7 +2,7 @@ package IKEA;
 
 import java.time.LocalDate;
 
-import War_cardGame.Customer;
+import IKEA.Customer;
 
 public class SalesMan extends Worker {
 

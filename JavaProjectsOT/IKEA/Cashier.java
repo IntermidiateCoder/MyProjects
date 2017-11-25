@@ -15,11 +15,16 @@ public class Cashier extends Worker {
 		this.setIncRate(1.1);
 		this.cr = new CashRegister(ID);
 	}
-	public void charge(Customer cust, Item...items) { // DONE
-			for(Item orderedItem : items) {
-				cust.setBalance(cust.getBalance() - orderedItem.getPrice());
-				this.getCashRegister().incBalance(orderedItem.getPrice());
-			}
+	public void charge(Customer cust, Item...items) {  
+		int totalCost = 0;
+		for(Item orderedItem : items) {
+			totalCost += orderedItem.getPrice();
+		}
+		if(cust.getBalance() < totalCost) {
+			System.out.println("Customer doesn't have enough money.");
+		}else {
+			cust.decBalance(totalCost);
+		}
 	}
 	public CashRegister openCashRegister() {
 		throw new java.lang.UnsupportedOperationException();
