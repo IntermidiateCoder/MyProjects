@@ -13,8 +13,14 @@ public class Cashier extends Worker {
 		this.setIncRate(1.1);
 	}
 	public void charge(Customer cust, Item...items) { // DONE
+		int totalCost = 0;
 		for(Item orderedItem : items) {
-			cust.setBalance(cust.getBalance() - orderedItem.getPrice());
+			totalCost += orderedItem.getPrice();
+		}
+		if(cust.getBalance() < totalCost) {
+			System.out.println("Customer doesn't have enough money.");
+		}else {
+			cust.decBalance(totalCost);
 		}
 	}
 	public void openCashRegister() {
