@@ -1,6 +1,11 @@
-package IKEA;
+package IKEA.Section.subclasses;
 
 import java.util.ArrayList;
+
+import IKEA.CashRegister;
+import IKEA.Section.Section;
+import IKEA.Worker.Worker;
+import IKEA.Worker.subclasses.Cashier;
 
 public class CashRegisterArea extends Section {
 	private ArrayList<CashRegister> crs;

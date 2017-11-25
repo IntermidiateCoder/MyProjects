@@ -1,4 +1,6 @@
-package IKEA;
+package IKEA.Item.subclasses;
+
+import IKEA.Item.Item;
 
 public class OfficeItem extends Item {
 

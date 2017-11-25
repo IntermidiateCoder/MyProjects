@@ -1,4 +1,4 @@
-package IKEA;
+package IKEA.Item;
 
 public class Item {
 	// Item ID: first character represents the section of the item and the rest its serial number 

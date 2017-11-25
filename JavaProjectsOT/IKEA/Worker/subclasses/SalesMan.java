@@ -1,8 +1,9 @@
-package IKEA;
+package IKEA.Worker.subclasses;
 
 import java.time.LocalDate;
 
 import IKEA.Customer;
+import IKEA.Worker.Worker;
 
 public class SalesMan extends Worker {
 

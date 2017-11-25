@@ -1,6 +1,11 @@
-package IKEA;
+package IKEA.Worker.subclasses;
 
 import java.time.LocalDate;
+
+import IKEA.CashRegister;
+import IKEA.Customer;
+import IKEA.Item.Item;
+import IKEA.Worker.Worker;
 
 public class Cashier extends Worker {
 	private CashRegister cr;

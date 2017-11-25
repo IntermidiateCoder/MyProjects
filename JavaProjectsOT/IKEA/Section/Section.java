@@ -1,6 +1,8 @@
-package IKEA;
+package IKEA.Section;
 
 import java.util.ArrayList;
+
+import IKEA.Worker.Worker;
 
 public class Section {
 	private double area;

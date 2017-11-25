@@ -7,9 +7,9 @@ import java.time.LocalDate;
 import org.junit.Before;
 import org.junit.Test;
 
-import IKEA.KitchenItem;
-import IKEA.Cashier;
 import IKEA.Customer;
+import IKEA.Item.subclasses.KitchenItem;
+import IKEA.Worker.subclasses.Cashier;
 
 public class TestCashier {
 	private Cashier c1;
