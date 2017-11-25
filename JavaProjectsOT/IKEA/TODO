@@ -1,7 +1,6 @@
 Cashier:
-	1. charge(Item...args) // void: charges customer 
-	2. openCashRegister() // void: makes line available for customers to come
-	3. closeCashRegister() // void: make line unavailable
+	1. openCashRegister() // void: makes line available for customers to come
+	2. closeCashRegister() // void: make line unavailable
 Tutor:
 	1. guideCustomer(String request)// void: guides Customer to requested section
 

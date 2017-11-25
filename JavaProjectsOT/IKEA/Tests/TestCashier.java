@@ -54,10 +54,10 @@ public class TestCashier {
 		c4.charge(cust4, new KitchenItem(123456, "Sink", 1000), new KitchenItem(123456, "Sink", 1000));
 		c5.charge(cust5, new KitchenItem(123456, "Sink", 10), new KitchenItem(123456, "Sink", 10), new KitchenItem(123456, "Sink", 10), new KitchenItem(123456, "Sink", 10), new KitchenItem(123456, "Sink", 10), new KitchenItem(123456, "Sink", 10), new KitchenItem(123456, "Sink", 10), new KitchenItem(123456, "Sink", 10), new KitchenItem(123456, "Sink", 10), new KitchenItem(123456, "Sink", 10), new KitchenItem(123456, "Sink", 10), new KitchenItem(123456, "Sink", 10), new KitchenItem(123456, "Sink", 10), new KitchenItem(123456, "Sink", 10), new KitchenItem(123456, "Sink", 10), new KitchenItem(123456, "Sink", 10));
 		assertEquals(cust.getBalance(), 250, 0);
-		assertEquals(cust.getBalance(), 1250, 0);
-		assertEquals(cust.getBalance(), 1250, 0);
-		assertEquals(cust.getBalance(), 1250, 0);
-		assertEquals(cust.getBalance(), 1090, 0);
+		assertEquals(cust2.getBalance(), 0, 0);
+		assertEquals(cust3.getBalance(), 250, 0);
+		assertEquals(cust4.getBalance(), 1250, 0);
+		assertEquals(cust5.getBalance(), 1090, 0);
 	}
 
 }
