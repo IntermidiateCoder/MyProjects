@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import IKEA.Worker.Worker;
 
-public class Section {
+public abstract class Section {
 	private double area;
 	private ArrayList<Worker> workers;
 	private String name;

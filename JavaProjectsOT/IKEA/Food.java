@@ -2,11 +2,10 @@ package IKEA;
 
 import java.time.LocalDate;
 
-public class Food {
+public abstract class Food {
 	private String name;
 	private double buyPrice;
 	private LocalDate madeAt;
-	private LocalDate freshUntil;
 	public double getBuyPrice() {
 		return buyPrice;
 	}
@@ -19,19 +18,16 @@ public class Food {
 	public LocalDate getMadeAt() {
 		return madeAt;
 	}
-	public LocalDate getFreshUntil() {
-		return freshUntil;
-	}
-	public Food(String name, double buyPrice, LocalDate madeAt, LocalDate freshUntil) {
+	public abstract LocalDate getFreshUntil();
+	
+	public Food(String name, double buyPrice, LocalDate madeAt) {
 		this.name = name;
 		this.buyPrice = buyPrice;
 		this.madeAt = madeAt;
-		this.freshUntil = freshUntil;
 	}
 	@Override
 	public String toString() {
-		return "Food [name = " + name + ", buyPrice = " + buyPrice + ", madeAt = " + madeAt + ", freshUntil = " + freshUntil
-				+ "]";
+		return "Food [name = " + name + ", buyPrice = " + buyPrice + ", madeAt = " + madeAt + " Fresh Until: " + this.getFreshUntil() + "]";
 	}
 	
 }
