@@ -10,6 +10,12 @@ public abstract class Hamburger {
 		this.cost = cost;
 		this.components = components;
 	}
+	public Hamburger(double cost, String[] components, double weight, String...requests) {
+		for(String request : requests)
+			delComponents(request);
+		this.cost = cost;
+		this.components = components;
+	}
 	public double getWeight() {
 		return weight;
 	}
@@ -25,8 +31,21 @@ public abstract class Hamburger {
 	public String[] getComponents() {
 		return components;
 	}
-	public void delComponents(ArrayList<String> components, String request) {
-		components.remove(request);
+	public void delComponents(String request) {
+		ArrayList<String> newBurger = new ArrayList<String>();
+		if(request.equals("Burger"))
+			return;
+		for(String s : components) {
+			if(!s.equals(request)) {
+				newBurger.add(s);
+			}
+		}
+		String[] newComponents = new String[newBurger.size()];
+		newComponents = newBurger.toArray(newComponents);
+		this.setComponents(newComponents);
+	}
+	public void setComponents(String[] components) {
+		this.components = components;
 	}
 	public void cookBurgers() {
 		System.out.println("cooking burgers");

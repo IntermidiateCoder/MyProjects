@@ -5,7 +5,13 @@ public class CheeseBurger extends Hamburger implements Cheesy{
 			{"Bread Bun", "Burger","Cheese", "Burger", "Cheese", "Onions", "Lettuce", "Bread Bun", "Large ToothPick"};
 	public CheeseBurger() {
 		super(19.95, components, 240);
-		super.cookBurgers();
+		cookBurgers();
+		meltCheese();
+		addComponents();
+	}
+	public CheeseBurger(String...requests) {
+		super(19.95, components, 240, requests);
+		cookBurgers();
 		meltCheese();
 		addComponents();
 	}

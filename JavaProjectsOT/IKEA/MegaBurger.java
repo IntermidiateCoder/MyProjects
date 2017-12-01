@@ -9,8 +9,14 @@ public class MegaBurger extends Hamburger implements Cheesy {
 		meltCheese();
 		addComponents();
 	}
+	public MegaBurger(String...requests) {
+		super(19.95, components, 240, requests);
+		cookBurgers();
+		meltCheese();
+		addComponents();
+	}
 	public void meltCheese() {
-		System.out.println("Melting Extra Chick Cheese");	
+		System.out.println("Melting Extra Thick Cheese");	
 	}
 	@Override
 	public String toString() {
