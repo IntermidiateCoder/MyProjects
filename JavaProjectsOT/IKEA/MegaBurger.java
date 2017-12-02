@@ -12,7 +12,13 @@ public class MegaBurger extends Hamburger implements Cheesy {
 		addComponents();
 	}
 	public MegaBurger(ArrayList<String> requests) {
-		super(19.95, components, 240, requests);
+		super(35.95, components, 480, requests);
+		cookBurgers();
+		meltCheese();
+		addComponents();
+	}
+	public MegaBurger(String...requests) {
+		super(35.95, components, 480, requests);
 		cookBurgers();
 		meltCheese();
 		addComponents();
@@ -23,7 +29,7 @@ public class MegaBurger extends Hamburger implements Cheesy {
 	@Override
 	public String toString() {
 		String burger = "";
-		for(String s : components) {
+		for(String s : MegaBurger.components) {
 			burger += s + " ";
 		}
 		return burger;

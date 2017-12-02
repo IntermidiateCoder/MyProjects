@@ -17,13 +17,19 @@ public class CheeseBurger extends Hamburger implements Cheesy{
 		meltCheese();
 		addComponents();
 	}
+	public CheeseBurger(String...requests) {
+		super(19.95, components, 240, requests);
+		cookBurgers();
+		meltCheese();
+		addComponents();
+	}
 	public void meltCheese() {
 		System.out.println("Melting Cheese");
 	}
 	@Override
 	public String toString() {
 		String burger = "";
-		for(String s : components) {
+		for(String s : CheeseBurger.components) {
 			burger += s + " ";
 		}
 		return burger;
