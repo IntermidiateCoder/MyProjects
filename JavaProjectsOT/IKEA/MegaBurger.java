@@ -1,5 +1,7 @@
 package IKEA;
 
+import java.util.ArrayList;
+
 public class MegaBurger extends Hamburger implements Cheesy {
 	private static String[] components = new String[] 
 			{"Bread Bun", "Burger","Extra Thick Cheese", "Burger", "Extra Thick Cheese", "Onions", "Lettuce", "Burger", "Extra Thick Cheese", "Burger", "Extra Thick Cheese", "Onions", "Lettuce", "Bread Bun", "Large ToothPick"};
@@ -9,7 +11,7 @@ public class MegaBurger extends Hamburger implements Cheesy {
 		meltCheese();
 		addComponents();
 	}
-	public MegaBurger(String...requests) {
+	public MegaBurger(ArrayList<String> requests) {
 		super(19.95, components, 240, requests);
 		cookBurgers();
 		meltCheese();

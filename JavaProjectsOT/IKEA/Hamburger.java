@@ -10,7 +10,7 @@ public abstract class Hamburger {
 		this.cost = cost;
 		this.components = components;
 	}
-	public Hamburger(double cost, String[] components, double weight, String...requests) {
+	public Hamburger(double cost, String[] components, double weight, ArrayList<String>requests) {
 		for(String request : requests)
 			delComponents(request);
 		this.cost = cost;
