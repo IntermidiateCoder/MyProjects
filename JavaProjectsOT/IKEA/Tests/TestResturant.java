@@ -25,11 +25,11 @@ public class TestResturant {
 	public void testOrderBurger() {
 		Customer cust = new Customer("John", 1550, "054-852-8533");
 		Hamburger resultBurger = new CheeseBurger("Lettuce");
-		Hamburger burger = r.orderBurger(cust, new String[] {"CheeseBurger", "Lettuce"}, c);
+		Hamburger burger = (Hamburger) r.orderFood(cust, new String[] {"CheeseBurger", "Lettuce"}, c);
 		Hamburger resultBurger2 = new CheeseBurger("Lettuce", "Onions");
-		Hamburger burger2 = r.orderBurger(cust, new String[] {"CheeseBurger", "Lettuce", "Onions"}, c);
+		Hamburger burger2 = (Hamburger) r.orderFood(cust, new String[] {"CheeseBurger", "Lettuce", "Onions"}, c);
 		Hamburger resultBurger3 = new CheeseBurger("Lettuce", "Burger", "Cheese");
-		Hamburger burger3 = r.orderBurger(cust, new String[] {"CheeseBurger", "Lettuce", "Cheese", "Burger"}, c);
+		Hamburger burger3 = (Hamburger) r.orderFood(cust, new String[] {"CheeseBurger", "Lettuce", "Cheese", "Burger"}, c);
 		assertEquals(burger, resultBurger);
 		assertEquals(burger2, resultBurger2);
 		assertEquals(burger3, resultBurger3);
