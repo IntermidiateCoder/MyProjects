@@ -1,4 +1,4 @@
-package IKEA;
+package IKEA.FoodTypes;
 
 public abstract class Food {
 	protected double cost;
@@ -17,10 +17,10 @@ public abstract class Food {
 		return components;
 	}
 	
-	public void setComponents(String[] components) {
+	public static void setComponents(String[] components) {
 		Food.components = components;
 	}
-
+	
 	public void addComponents() {
 		System.out.println("adding components");
 	}

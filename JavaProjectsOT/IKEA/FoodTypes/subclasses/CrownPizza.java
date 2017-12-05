@@ -1,4 +1,4 @@
-package IKEA;
+package IKEA.FoodTypes.subclasses;
 
 public class CrownPizza extends Pizza{
 	private static String[] components = new String[]

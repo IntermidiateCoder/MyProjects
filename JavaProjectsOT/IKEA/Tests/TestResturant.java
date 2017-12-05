@@ -6,8 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import IKEA.Customer;
-import IKEA.Food.subclasses.CheeseBurger;
-import IKEA.Food.subclasses.Hamburger;
+import IKEA.FoodTypes.subclasses.CheeseBurger;
+import IKEA.FoodTypes.subclasses.Hamburger;
 import IKEA.Section.subclasses.Resturant;
 import IKEA.Worker.subclasses.Cashier;
 

@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 import IKEA.CashRegister;
 import IKEA.Customer;
-import IKEA.Food.Food;
-import IKEA.Food.subclasses.CheeseBurger;
-import IKEA.Food.subclasses.CrownPizza;
-import IKEA.Food.subclasses.ItalianPizza;
-import IKEA.Food.subclasses.MegaBurger;
+import IKEA.FoodTypes.Food;
+import IKEA.FoodTypes.subclasses.CheeseBurger;
+import IKEA.FoodTypes.subclasses.CrownPizza;
+import IKEA.FoodTypes.subclasses.ItalianPizza;
+import IKEA.FoodTypes.subclasses.MegaBurger;
 import IKEA.Section.Section;
 import IKEA.Worker.Worker;
 import IKEA.Worker.subclasses.Cashier;

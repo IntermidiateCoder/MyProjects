@@ -2,7 +2,6 @@ package IKEA;
 
 import java.util.regex.*;
 
-
 public class Customer {
 	public Customer(String name, double balance, String pn) {
 		if(Customer.isPhoneNumReal(pn))

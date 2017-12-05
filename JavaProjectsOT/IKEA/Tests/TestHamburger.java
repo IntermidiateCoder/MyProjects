@@ -4,8 +4,8 @@ package IKEA.Tests;
 import org.junit.Before;
 import org.junit.Test;
 
-import IKEA.Food.subclasses.CheeseBurger;
-import IKEA.Food.subclasses.MegaBurger;
+import IKEA.FoodTypes.subclasses.CheeseBurger;
+import IKEA.FoodTypes.subclasses.MegaBurger;
 
 public class TestHamburger {
 	private CheeseBurger b1;

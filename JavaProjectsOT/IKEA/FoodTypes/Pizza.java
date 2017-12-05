@@ -1,4 +1,4 @@
-package IKEA;
+package IKEA.FoodTypes;
 
 public abstract class Pizza extends Food{
 	protected double size;

@@ -1,4 +1,4 @@
-package IKEA.Food.subclasses;
+package IKEA.FoodTypes.subclasses;
 
 public interface Cheesy {
 	void meltCheese();
