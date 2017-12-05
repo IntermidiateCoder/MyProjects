@@ -22,7 +22,7 @@ public class TestResturant {
 	}
 
 	@Test
-	public void testOrderBurger() {
+	public void testOrderFood() {
 		Customer cust = new Customer("John", 1550, "054-852-8533");
 		Hamburger resultBurger = new CheeseBurger("Lettuce");
 		Hamburger burger = (Hamburger) r.orderFood(cust, new String[] {"CheeseBurger", "Lettuce"}, c);
@@ -30,9 +30,12 @@ public class TestResturant {
 		Hamburger burger2 = (Hamburger) r.orderFood(cust, new String[] {"CheeseBurger", "Lettuce", "Onions"}, c);
 		Hamburger resultBurger3 = new CheeseBurger("Lettuce", "Burger", "Cheese");
 		Hamburger burger3 = (Hamburger) r.orderFood(cust, new String[] {"CheeseBurger", "Lettuce", "Cheese", "Burger"}, c);
-		assertEquals(burger, resultBurger);
-		assertEquals(burger2, resultBurger2);
-		assertEquals(burger3, resultBurger3);
+		for(int i=0; i<burger.getMyComponents().length;i++)
+			assertEquals(burger.getMyComponents()[i], resultBurger.getMyComponents()[i]);
+		for(int i=0; i<burger2.getMyComponents().length;i++)
+			assertEquals(burger2.getMyComponents()[i], resultBurger2.getMyComponents()[i]);
+		for(int i=0; i<burger3.getMyComponents().length;i++)
+			assertEquals(burger3.getMyComponents()[i], resultBurger3.getMyComponents()[i]);
 	}
 
 }

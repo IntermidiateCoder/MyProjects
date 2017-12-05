@@ -51,21 +51,11 @@ public class Resturant extends Section {
 				foods.add(burger);
 				totalCost += burger.getCost();
 			}else if(arr[0].equals("CrownPizza")) {
-				CrownPizza pizza = null;
-				ArrayList<String> requests = new ArrayList<String>();
-				for(int i=1;i<arr.length;i++) {
-					requests.add(arr[i]);
-				}
-				pizza = new CrownPizza(requests);
+				CrownPizza pizza = new CrownPizza();
 				foods.add(pizza);
 				totalCost += pizza.getCost();
 			}else if(arr[0].equals("ItalianPizza")) {
-				ItalianPizza pizza = null;
-				ArrayList<String> requests = new ArrayList<String>();
-				for(int i=1;i<arr.length;i++) {
-					requests.add(arr[i]);
-				}
-				pizza = new ItalianPizza(requests);
+				ItalianPizza pizza = new ItalianPizza();
 				foods.add(pizza);
 				totalCost += pizza.getCost();
 			}else
@@ -102,24 +92,14 @@ public class Resturant extends Section {
 			}
 			
 		}else if(order[0].equals("CrownPizza")) {
-			CrownPizza pizza = null;
-			ArrayList<String> requests = new ArrayList<String>();
-			for(int i=1;i<order.length;i++) {
-				requests.add(order[i]);
-			}
-			pizza = new CrownPizza(requests);
+			CrownPizza pizza = new CrownPizza();
 			if(cust.getBalance() >= pizza.getCost()) {
 				cashier.charge(cust, pizza.getCost());
 				return pizza;
 			}
 			
 		}else if(order[0].equals("ItalianPizza")) {
-			ItalianPizza pizza = null;
-			ArrayList<String> requests = new ArrayList<String>();
-			for(int i=1;i<order.length;i++) {
-				requests.add(order[i]);
-			}
-			pizza = new ItalianPizza(requests);
+			ItalianPizza pizza = new ItalianPizza();
 			if(cust.getBalance() >= pizza.getCost()) {
 				cashier.charge(cust, pizza.getCost());
 				return pizza;
