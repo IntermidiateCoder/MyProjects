@@ -1,6 +1,8 @@
-package IKEA;
+package IKEA.Food;
 
 import java.util.ArrayList;
+
+import IKEA.Food.subclasses.Hamburger;
 
 public abstract class Food {
 	protected double cost;

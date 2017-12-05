@@ -1,4 +1,4 @@
-package IKEA;
+package IKEA.Food.subclasses;
 
 import java.util.ArrayList;
 

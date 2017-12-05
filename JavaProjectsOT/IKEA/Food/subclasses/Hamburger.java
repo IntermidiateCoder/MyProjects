@@ -1,6 +1,8 @@
-package IKEA;
+package IKEA.Food.subclasses;
 
 import java.util.ArrayList;
+
+import IKEA.Food.Food;
 
 public abstract class Hamburger extends Food {
 	protected double weight;

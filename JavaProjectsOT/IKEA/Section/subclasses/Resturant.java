@@ -3,12 +3,12 @@ package IKEA.Section.subclasses;
 import java.util.ArrayList;
 
 import IKEA.CashRegister;
-import IKEA.CheeseBurger;
-import IKEA.CrownPizza;
 import IKEA.Customer;
-import IKEA.Food;
-import IKEA.ItalianPizza;
-import IKEA.MegaBurger;
+import IKEA.Food.Food;
+import IKEA.Food.subclasses.CheeseBurger;
+import IKEA.Food.subclasses.CrownPizza;
+import IKEA.Food.subclasses.ItalianPizza;
+import IKEA.Food.subclasses.MegaBurger;
 import IKEA.Section.Section;
 import IKEA.Worker.Worker;
 import IKEA.Worker.subclasses.Cashier;
