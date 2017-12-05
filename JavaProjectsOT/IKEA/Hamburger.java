@@ -2,40 +2,25 @@ package IKEA;
 
 import java.util.ArrayList;
 
-public abstract class Hamburger {
-	protected double cost;
-	protected static String[] components;
+public abstract class Hamburger extends Food {
 	protected double weight;
 	public Hamburger(double cost, String[] components, double weight) {
-		this.cost = cost;
-		Hamburger.components = components;
+		super(cost, components);
+		this.weight = weight;
 	}
 	public Hamburger(double cost, String[] components, double weight, ArrayList<String> requests) {
-		Hamburger.components = components;
-		for(String request : requests)
-			delComponents(request);
-		this.cost = cost;
+		super(cost, components, requests);
+		this.weight = weight;
 	}
 	public Hamburger(double cost, String[] components, double weight, String...requests) {
-		Hamburger.components = components;
-		for(String request : requests)
-			delComponents(request);
-		this.cost = cost;
+		super(cost, components, requests);
+		this.weight = weight;
 	}
 	public double getWeight() {
 		return weight;
 	}
 	public void setWeight(int weight) {
 		this.weight = weight;
-	}
-	public double getCost() {
-		return cost;
-	}
-	public void setCost(int cost) {
-		this.cost = cost;
-	}
-	public static String[] getComponents() {
-		return components;
 	}
 	public void delComponents(String request) {
 		ArrayList<String> newBurger = new ArrayList<String>();
@@ -50,14 +35,8 @@ public abstract class Hamburger {
 		newComponents = newBurger.toArray(newComponents);
 		Hamburger.setComponents(newComponents);
 	}
-	public static void setComponents(String[] components) {
-		Hamburger.components = components;
-	}
-	public void cookBurgers() {
+	public void cook() {
 		System.out.println("cooking burgers");
-	}
-	public void addComponents() {
-		System.out.println("adding components");
 	}
 	@Override
 	public String toString() {

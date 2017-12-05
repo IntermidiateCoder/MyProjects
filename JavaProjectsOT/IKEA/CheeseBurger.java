@@ -7,19 +7,19 @@ public class CheeseBurger extends Hamburger implements Cheesy{
 			{"Bread Bun", "Burger","Cheese", "Burger", "Cheese", "Onions", "Lettuce", "Bread Bun", "Large ToothPick"};
 	public CheeseBurger() {
 		super(19.95, components, 240);
-		cookBurgers();
+		cook();
 		meltCheese();
 		addComponents();
 	}
 	public CheeseBurger(ArrayList<String>requests) {
 		super(19.95, components, 240, requests);
-		cookBurgers();
+		cook();
 		meltCheese();
 		addComponents();
 	}
 	public CheeseBurger(String...requests) {
 		super(19.95, components, 240, requests);
-		cookBurgers();
+		cook();
 		meltCheese();
 		addComponents();
 	}
