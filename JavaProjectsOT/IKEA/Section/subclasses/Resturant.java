@@ -4,8 +4,10 @@ import java.util.ArrayList;
 
 import IKEA.CashRegister;
 import IKEA.CheeseBurger;
+import IKEA.CrownPizza;
 import IKEA.Customer;
 import IKEA.Food;
+import IKEA.ItalianPizza;
 import IKEA.MegaBurger;
 import IKEA.Section.Section;
 import IKEA.Worker.Worker;
@@ -48,6 +50,24 @@ public class Resturant extends Section {
 				burger = new MegaBurger(requests);
 				foods.add(burger);
 				totalCost += burger.getCost();
+			}else if(arr[0].equals("CrownPizza")) {
+				CrownPizza pizza = null;
+				ArrayList<String> requests = new ArrayList<String>();
+				for(int i=1;i<arr.length;i++) {
+					requests.add(arr[i]);
+				}
+				pizza = new CrownPizza(requests);
+				foods.add(pizza);
+				totalCost += pizza.getCost();
+			}else if(arr[0].equals("ItalianPizza")) {
+				ItalianPizza pizza = null;
+				ArrayList<String> requests = new ArrayList<String>();
+				for(int i=1;i<arr.length;i++) {
+					requests.add(arr[i]);
+				}
+				pizza = new ItalianPizza(requests);
+				foods.add(pizza);
+				totalCost += pizza.getCost();
 			}else
 				continue;
 		} 
@@ -80,6 +100,31 @@ public class Resturant extends Section {
 				cashier.charge(cust, burger.getCost());
 				return burger;
 			}
+			
+		}else if(order[0].equals("CrownPizza")) {
+			CrownPizza pizza = null;
+			ArrayList<String> requests = new ArrayList<String>();
+			for(int i=1;i<order.length;i++) {
+				requests.add(order[i]);
+			}
+			pizza = new CrownPizza(requests);
+			if(cust.getBalance() >= pizza.getCost()) {
+				cashier.charge(cust, pizza.getCost());
+				return pizza;
+			}
+			
+		}else if(order[0].equals("ItalianPizza")) {
+			ItalianPizza pizza = null;
+			ArrayList<String> requests = new ArrayList<String>();
+			for(int i=1;i<order.length;i++) {
+				requests.add(order[i]);
+			}
+			pizza = new ItalianPizza(requests);
+			if(cust.getBalance() >= pizza.getCost()) {
+				cashier.charge(cust, pizza.getCost());
+				return pizza;
+			}
+			
 		}
 		return null;
 	}
