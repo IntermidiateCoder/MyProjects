@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import IKEA.CashRegister;
 import IKEA.CheeseBurger;
 import IKEA.Customer;
-import IKEA.Hamburger;
+import IKEA.Food;
 import IKEA.MegaBurger;
 import IKEA.Section.Section;
 import IKEA.Worker.Worker;
@@ -26,8 +26,8 @@ public class Resturant extends Section {
 	public void setCr(CashRegister cr) {
 		this.cr = cr;
 	}
-	public ArrayList<Hamburger> orderBurgers(Customer cust, ArrayList<String[]> order, Cashier cashier) {
-		ArrayList<Hamburger> burgers = new ArrayList<Hamburger>();
+	public ArrayList<Food> orderFood(Customer cust, ArrayList<String[]> order, Cashier cashier) {
+		ArrayList<Food> foods = new ArrayList<Food>();
 		double totalCost = 0;
 		for(String[] arr : order) {
 			if(arr[0].equals("CheeseBurger")){
@@ -37,7 +37,7 @@ public class Resturant extends Section {
 					requests.add(arr[i]);
 				}
 				burger = new CheeseBurger(requests);
-				burgers.add(burger);
+				foods.add(burger);
 				totalCost += burger.getCost();
 			}else if(arr[0].equals("MegaBurger")) {
 				MegaBurger burger = null;
@@ -46,18 +46,18 @@ public class Resturant extends Section {
 					requests.add(arr[i]);
 				}
 				burger = new MegaBurger(requests);
-				burgers.add(burger);
+				foods.add(burger);
 				totalCost += burger.getCost();
 			}else
 				continue;
-		}
+		} 
 		if(cust.getBalance() >= totalCost) {
 			cashier.getCashRegister().charge(cust, totalCost);
-			return burgers;
+			return foods;
 		}else
 			return null;
 	}
-	public Hamburger orderBurger(Customer cust, String[] order, Cashier cashier) {
+	public Food orderFood(Customer cust, String[] order, Cashier cashier) {
 		if(order[0].equals("CheeseBurger")){
 			CheeseBurger burger = null;
 			ArrayList<String> requests = new ArrayList<String>();
