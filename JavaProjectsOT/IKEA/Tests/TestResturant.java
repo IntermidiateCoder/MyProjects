@@ -5,9 +5,9 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import IKEA.CheeseBurger;
 import IKEA.Customer;
-import IKEA.Hamburger;
+import IKEA.Food.subclasses.CheeseBurger;
+import IKEA.Food.subclasses.Hamburger;
 import IKEA.Section.subclasses.Resturant;
 import IKEA.Worker.subclasses.Cashier;
 
