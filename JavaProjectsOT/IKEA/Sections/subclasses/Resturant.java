@@ -1,4 +1,4 @@
-package IKEA.Section.subclasses;
+package IKEA.Sections.subclasses;
 
 import java.util.ArrayList;
 
@@ -9,7 +9,7 @@ import IKEA.FoodTypes.subclasses.CheeseBurger;
 import IKEA.FoodTypes.subclasses.CrownPizza;
 import IKEA.FoodTypes.subclasses.ItalianPizza;
 import IKEA.FoodTypes.subclasses.MegaBurger;
-import IKEA.Section.Section;
+import IKEA.Sections.Section;
 import IKEA.Worker.Worker;
 import IKEA.Worker.subclasses.Cashier;
 

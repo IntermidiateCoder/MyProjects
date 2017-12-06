@@ -1,8 +1,8 @@
-package IKEA.Section.subclasses;
+package IKEA.Sections.subclasses;
 import java.util.ArrayList;
 
 import IKEA.Item.Item;
-import IKEA.Section.Section;
+import IKEA.Sections.Section;
 import IKEA.Worker.Worker;
 
 public class ItemStoreSection extends Section {

@@ -8,7 +8,7 @@ import org.junit.Test;
 import IKEA.Customer;
 import IKEA.FoodTypes.subclasses.CheeseBurger;
 import IKEA.FoodTypes.subclasses.Hamburger;
-import IKEA.Section.subclasses.Resturant;
+import IKEA.Sections.subclasses.Resturant;
 import IKEA.Worker.subclasses.Cashier;
 
 public class TestResturant {

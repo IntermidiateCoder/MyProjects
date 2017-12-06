@@ -38,7 +38,4 @@ public class Cashier extends Worker {
 	public void charge(Customer cust, Item...items) {
 		this.getCashRegister().charge(cust, items);
 	}
-	public void order(Customer cust, Item...items) { // TODO. 
-		throw new java.lang.UnsupportedOperationException();
-	} 
 }

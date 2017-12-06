@@ -1,4 +1,4 @@
-package IKEA.Section;
+package IKEA.Sections;
 
 import java.util.ArrayList;
 

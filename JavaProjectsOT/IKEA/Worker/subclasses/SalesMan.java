@@ -22,8 +22,21 @@ public class SalesMan extends Worker {
 			System.out.println("A convinced customer will visit the shop soon. His phone: " + phoneNumber);
 		}
 	}
-	public void convinceToBuy(Customer cust) {
-		throw new UnsupportedOperationException();
+	public boolean convinceToBuy(Customer cust) {
+		double custBalance = cust.getBalance();
+		int CONVINCED = 1;
+		if(custBalance >= 15000) {
+			int oneToSeven = (int)(Math.random() * 7) + 1;
+			if(oneToSeven == CONVINCED) {
+				return true;
+			}else {
+				int oneToTen = (int)(Math.random() * 10) + 1;
+				if(oneToTen == CONVINCED) {
+					return true;
+				}	
+			}
+		}
+		return false;
 	}
 
 }

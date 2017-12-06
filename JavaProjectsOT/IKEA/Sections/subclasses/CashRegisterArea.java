@@ -1,9 +1,9 @@
-package IKEA.Section.subclasses;
+package IKEA.Sections.subclasses;
 
 import java.util.ArrayList;
 
 import IKEA.CashRegister;
-import IKEA.Section.Section;
+import IKEA.Sections.Section;
 import IKEA.Worker.Worker;
 import IKEA.Worker.subclasses.Cashier;
 
