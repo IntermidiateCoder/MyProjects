@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import IKEA.CashRegister;
 import IKEA.Customer;
-import IKEA.Item.subclasses.KitchenItem;
+import IKEA.Item.subclasses.KitchenItems.KitchenItem;
 
 public class TestCashRegister {
 	private CashRegister c1;
