@@ -5,5 +5,7 @@ public class Lightbulb extends BedRoomItem{
 	public Lightbulb(int itemID, String name) {
 		super(itemID, "Ligthbulb", 10, 2);
 	}
-
+	public Lightbulb(int itemID, String name, int num) {
+		super(itemID, "Ligthbulb", 10, 2, num);
+	}
 }

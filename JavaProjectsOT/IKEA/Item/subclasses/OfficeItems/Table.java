@@ -12,6 +12,13 @@ public class Table extends OfficeItem{
 		this.length = length;
 		this.typeOfWood = typeOfWood;
 	}
+	public Table(int itemID, int width, int height, int length, String typeOfWood, int num) {
+		super(itemID, "Table", 100, 43, num);
+		this.width = width;
+		this.height = height;
+		this.length = length;
+		this.typeOfWood = typeOfWood;
+	}
 	public int getWidth() {
 		return width;
 	}

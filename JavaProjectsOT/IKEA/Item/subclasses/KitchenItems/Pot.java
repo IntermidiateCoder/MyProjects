@@ -8,6 +8,11 @@ public class Pot extends KitchenItem{
 		this.length = length;
 		this.width = width;
 	}
+	public Pot(int itemID, int length, int width, int num) {
+		super(itemID, "Pot", 14, 9, num);
+		this.length = length;
+		this.width = width;
+	}
 	public int getLength() {
 		return length;
 	}

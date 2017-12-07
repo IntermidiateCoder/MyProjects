@@ -8,6 +8,11 @@ public class Pan extends KitchenItem{
 		this.length = length;
 		this.width = width;
 	}
+	public Pan(int itemID, int length, int width, int num) {
+		super(itemID, "Pan", 15, 7, num);
+		this.length = length;
+		this.width = width;
+	}
 	public int getLength() {
 		return length;
 	}

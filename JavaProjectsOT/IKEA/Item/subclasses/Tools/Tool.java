@@ -1,4 +1,4 @@
-package IKEA.Item.subclasses;
+package IKEA.Item.subclasses.Tools;
 
 import IKEA.Item.Item;
 

@@ -6,6 +6,10 @@ public class Pickaxe extends GardenItem{
 		super(itemID, "Pickaxe", 8, 3);
 		this.typeOfSteel = typeOfSteel;
 	}
+	public Pickaxe(int itemID, String typeOfSteel, int num) {
+		super(itemID, "Pickaxe", 8, 3, num);
+		this.typeOfSteel = typeOfSteel;
+	}
 	public String getTypeOfSteel() {
 		return typeOfSteel;
 	}

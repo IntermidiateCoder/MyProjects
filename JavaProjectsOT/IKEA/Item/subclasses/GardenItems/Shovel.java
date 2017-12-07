@@ -6,6 +6,10 @@ public class Shovel extends GardenItem{
 		super(itemID, "Shovel", 5, 2);
 		this.typeOfSteel = typeOfSteel;
 	}
+	public Shovel(int itemID, String typeOfSteel, int num) {
+		super(itemID, "Shovel", 5, 2, num);
+		this.typeOfSteel = typeOfSteel;
+	}
 	public String getTypeOfSteel() {
 		return typeOfSteel;
 	}
