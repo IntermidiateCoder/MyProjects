@@ -1,11 +1,13 @@
-Cashier:
-	1. openCashRegister() // void: makes line available for customers to come
-	2. closeCashRegister() // void: make line unavailable
-Tutor:
-	1. guideCustomer(String request)// void: guides Customer to requested section
 
-SalesMan:
-  	1. convinceToBuy(String phonenumber) // void:
-Chef:
-	1. Cook methods - set of actions to cook request food
-	2. claimReady(Food...args) // boolean: announces to the cashier the food is ready for serving
+Tutor:
+	1. giveCustomer(String itemID) // Item: return to Customer the requested item
+	2. item section property
+	3. findItem(String itemID) // private Item: returns item if exists in this section
+
+Customer:
+	1. cart property
+	2. addToCart(String itemID) // void: adds to cart an item by item ID
+	3. addToCart(String itemID, int amt) // void: adds to cart an item by item ID times the amt (amt > 1)
+	4. buy() // void: buys items in the cart if customer has enough money
+
+

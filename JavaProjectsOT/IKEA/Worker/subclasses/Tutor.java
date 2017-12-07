@@ -1,6 +1,7 @@
 package IKEA.Worker.subclasses;
 import java.time.LocalDate;
 
+import IKEA.Item.Item;
 import IKEA.Worker.Worker;
 
 public class Tutor extends Worker{
@@ -12,7 +13,7 @@ public class Tutor extends Worker{
 		super(startingDate, name, section, 5300);
 		this.setIncRate(1.15);
 	}
-	public void guideCustomer(String request) {
+	public Item giveCustomer(String request) {
 		throw new java.lang.UnsupportedOperationException();
 	}
 	

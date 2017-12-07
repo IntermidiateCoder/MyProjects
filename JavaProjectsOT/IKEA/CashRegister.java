@@ -1,5 +1,7 @@
 package IKEA;
 
+import java.util.ArrayList;
+
 import IKEA.Item.Item;
 
 public class CashRegister {
@@ -45,18 +47,31 @@ public class CashRegister {
 		this.setBalance(this.getBalance() + sum);
 		IKEAStore.addBalance(sum);
 	}
-	public void charge(Customer cust, Item...items) {  
+
+	public void charge(Customer cust, Item...items) { 
 		double totalCost = 0;
+		ArrayList<Item> cart = new ArrayList<Item>();
 		for(Item orderedItem : items) {
-			totalCost += orderedItem.getPrice();
+			if(!checkInStock(orderedItem)) {
+				IKEAStore.order(orderedItem);
+			}
+			totalCost += orderedItem.getSellPrice();
+			cart.add(orderedItem);
 		}
 		if(cust.getBalance() < totalCost) {
 			System.out.println("Customer doesn't have enough money.");
 		}else {
 			cust.decBalance(totalCost);
 			this.incBalance(totalCost);
+			for(Item i : cart)
+				i.addInStock(-1);
 		}
 	}
+
+	private boolean checkInStock(Item item) {
+		return item.getInStock() > 0;
+	}
+
 	public void charge(Customer cust, double sum) {
 		cust.decBalance(sum);
 		this.incBalance(sum);

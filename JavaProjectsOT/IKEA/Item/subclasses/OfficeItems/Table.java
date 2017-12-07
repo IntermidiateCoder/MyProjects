@@ -4,20 +4,20 @@ public class Table extends OfficeItem{
 	private int width;
 	private int height;
 	private int length;
-	private String typeOfWood;
-	public Table(int itemID, int width, int height, int length, String typeOfWood) {
+	private String type;
+	public Table(int itemID, int width, int height, int length, String type) {
 		super(itemID, "Table", 100, 43);
 		this.width = width;
 		this.height = height;
 		this.length = length;
-		this.typeOfWood = typeOfWood;
+		this.type = type;
 	}
-	public Table(int itemID, int width, int height, int length, String typeOfWood, int num) {
+	public Table(int itemID, int width, int height, int length, String type, int num) {
 		super(itemID, "Table", 100, 43, num);
 		this.width = width;
 		this.height = height;
 		this.length = length;
-		this.typeOfWood = typeOfWood;
+		this.type = type;
 	}
 	public int getWidth() {
 		return width;
@@ -28,7 +28,7 @@ public class Table extends OfficeItem{
 	public int getLength() {
 		return length;
 	}
-	public String getTypeOfWood() {
-		return typeOfWood;
+	public String getType() {
+		return type;
 	}
 }

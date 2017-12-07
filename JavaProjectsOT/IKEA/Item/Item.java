@@ -1,24 +1,26 @@
 package IKEA.Item;
 
+import IKEA.IKEAStore;
+
 public class Item {
 	// Item ID: first character represents the section of the item and the rest its serial number 
 	private String itemID;	   
 	private String name;
 	private double sellPrice;
-	private double buyPrice;
+	private static double buyPrice;
 	protected static int inStock;
 	public Item(int itemID, String name, double sellPrice, double buyPrice, char sectionID) {
 		this.itemID = sectionID + Integer.toString(itemID);
 		this.name = name;
 		this.sellPrice = sellPrice;
-		this.buyPrice = buyPrice;
+		Item.buyPrice = buyPrice;
 		Item.inStock = 0;
 	}
 	public Item(int itemID, String name, double sellPrice, double buyPrice, char sectionID, int quan) {
 		this.itemID = sectionID + Integer.toString(itemID);
 		this.name = name;
 		this.sellPrice = sellPrice;
-		this.buyPrice = buyPrice;
+		Item.buyPrice = buyPrice;
 		Item.inStock = quan;
 	}
 	public double getSellPrice() {
@@ -27,7 +29,7 @@ public class Item {
 	public void setSellPrice(double sellPrice) {
 		this.sellPrice = sellPrice;
 	}
-	public static int getInStock() {
+	public int getInStock() {
 		return inStock;
 	}
 	public double getBuyPrice() {
@@ -48,8 +50,10 @@ public class Item {
 	public void setPrice(double price) {
 		this.sellPrice = price;
 	}
-	public static void addInStock(int num) {
-		Item.inStock += num;
+	public void addInStock(int num) {
+			double sum = num*Item.buyPrice;
+			if(IKEAStore.getBalance() < sum)
+				IKEAStore.addBalance(sum*-1);
 	}
 	@Override
 	public String toString() {

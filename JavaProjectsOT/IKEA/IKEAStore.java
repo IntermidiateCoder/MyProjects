@@ -1,5 +1,6 @@
 package IKEA;
 
+import IKEA.Item.Item;
 import IKEA.Sections.Section;
 
 public class IKEAStore {
@@ -19,5 +20,8 @@ public class IKEAStore {
 	}
 	public static void addBalance(double amt) {
 		IKEAStore.balance += amt;
+	}
+	public static void order(Item orderedItem) {
+		orderedItem.addInStock(25);
 	}
 }
