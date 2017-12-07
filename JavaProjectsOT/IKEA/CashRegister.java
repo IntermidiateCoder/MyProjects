@@ -43,6 +43,7 @@ public class CashRegister {
 	}
 	public void incBalance(double sum) {
 		this.setBalance(this.getBalance() + sum);
+		IKEAStore.addBalance(sum);
 	}
 	public void charge(Customer cust, Item...items) {  
 		double totalCost = 0;

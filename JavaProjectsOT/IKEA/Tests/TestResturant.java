@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import IKEA.CashRegister;
 import IKEA.Customer;
 import IKEA.FoodTypes.subclasses.CheeseBurger;
 import IKEA.FoodTypes.subclasses.Hamburger;
@@ -14,9 +15,10 @@ import IKEA.Worker.subclasses.Cashier;
 public class TestResturant {
 	private Cashier c;
 	private Resturant r;
+	private CashRegister cr = new CashRegister("1234");
 	@Before
 	public void setUp() throws Exception {
-		c = new Cashier("Helen", "12365");
+		c = new Cashier("Helen", "12365", cr);
 		r = new Resturant(120);
 		r.getWorkers().add(c);
 	}

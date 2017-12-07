@@ -10,15 +10,15 @@ import IKEA.Worker.Worker;
 public class Cashier extends Worker {
 	private CashRegister cr;
 	
-	public Cashier(String name, String ID) {
+	public Cashier(String name, String ID, CashRegister cr) {
 		super(name, "Cash Register Section", 4850);
-		this.cr = new CashRegister(ID); // MUST BE CHANGED!!!
+		this.cr = cr;
 		this.setIncRate(1.1);
 	}
-	public Cashier(LocalDate startingDate, String name, String ID) {
+	public Cashier(LocalDate startingDate, String name, String ID, CashRegister cr) {
 		super(startingDate, name, "Cash Register Section", 4850);
 		this.setIncRate(1.1);
-		this.cr = new CashRegister(ID); // MUST BE CHANGED!!!
+		this.cr = cr;
 	}
 	public void openCashRegister() {
 		cr.setFree(true);
