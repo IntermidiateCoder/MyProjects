@@ -17,11 +17,11 @@ public class TestWorker {
 	@Before
 	public void setUp() throws Exception{
 		w1 = new Worker(LocalDate.of(2016, LocalDate.now().getMonth(), 
-				LocalDate.now().getDayOfMonth()), "tamir", "jimbory", 1500.00);
-		w2 = new Worker(LocalDate.of(2000, 10, 20), "Ofek", "jimbory", 15.25);
-		w3 = new Worker(LocalDate.of(2005, 9, 5), "Dani", "Prostitue(Hoeing) Section", 19992.505);
-		w4 = new Worker("Ido", "Sales Department", 2.0);
-		w5 = new Worker(LocalDate.of(2019, 11, 22), "Almog", "Pedophile Department", -50000.0);
+				LocalDate.now().getDayOfMonth()), "tamir", null, 1500.00);
+		w2 = new Worker(LocalDate.of(2000, 10, 20), "Ofek", null, 15.25);
+		w3 = new Worker(LocalDate.of(2005, 9, 5), "Dani", null, 19992.505);
+		w4 = new Worker("Ido", null, 2.0);
+		w5 = new Worker(LocalDate.of(2019, 11, 22), "Almog", null, -50000.0);
 	}
 	@Test
 	public void TestIncreaseSalary() {

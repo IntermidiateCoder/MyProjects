@@ -24,6 +24,13 @@ import IKEA.Worker.subclasses.Tutor;
 public class RealLifeStore {
 	public static void prepareStore() {
 		Section[] s = new Section[7];
+		ItemStoreSection iss1 = null;
+		ItemStoreSection iss2 = null;
+		ItemStoreSection iss3 = null;
+		ItemStoreSection iss4 = null;
+		ItemStoreSection iss5 = null;
+		CashRegisterArea cra = null;
+		Resturant r = null;
 		ArrayList<CashRegister> crs = new ArrayList<CashRegister>();
 		ArrayList<Cashier> cashiers = new ArrayList<Cashier>();
 		ArrayList<Worker> cashiers2 = new ArrayList<Worker>();
@@ -47,62 +54,60 @@ public class RealLifeStore {
 		ArrayList<Item> ti = new ArrayList<Item>();
 		ti.add(new Hammer(1323, "Iron", 16, 5, 125));
 		ti.add(new Screwdriver(1323, 5, 125));
-		ArrayList<ItemStoreSection> iss = new ArrayList<ItemStoreSection>();
-		int num = 1650;
 		for(int i=0;i<10;i++) {
 			CashRegister cr = new CashRegister(Integer.toString(1650+i));
 			crs.add(cr);
 			if(i%2==0) {
-				cashiers.add(new Cashier("Jenya", Integer.toString(num*2+i), crs.get(i)));
-				workers1.add(new Tutor("Roger", Integer.toString(num*3+i)));
-				workers2.add(new Tutor("Ilan", Integer.toString(num*4+i)));
-				workers3.add(new Tutor("Michael", Integer.toString(num*5+i)));
-				workers4.add(new Tutor("David", Integer.toString(num*3+i*9)));
-				workers5.add(new Tutor("Sirgay", Integer.toString(num*4+i*5)));
+				cashiers.add(new Cashier("Jenya", cra, crs.get(i)));
+				workers1.add(new Tutor("Roger", iss1));
+				workers2.add(new Tutor("Ilan", iss2));
+				workers3.add(new Tutor("Michael", iss3));
+				workers4.add(new Tutor("David", iss4));
+				workers5.add(new Tutor("Sirgay", iss5));
 			}
 			else if(i%3==0) {
-				cashiers.add(new Cashier("Mualem", Integer.toString(num*2+i), crs.get(i)));
-				workers1.add(new Tutor("Raz", Integer.toString(num*3+i)));
-				workers2.add(new Tutor("Sahar", Integer.toString(num*4+i)));
-				workers3.add(new Tutor("Kzizi", Integer.toString(num*5+i)));
-				workers4.add(new Tutor("Maor", Integer.toString(num*3+i*9)));
-				workers5.add(new Tutor("Sirgay", Integer.toString(num*4+i*5)));
+				cashiers.add(new Cashier("Mualem", cra, crs.get(i)));
+				workers1.add(new Tutor("Raz", iss1));
+				workers2.add(new Tutor("Sahar", iss2));
+				workers3.add(new Tutor("Kzizi", iss3));
+				workers4.add(new Tutor("Maor", iss4));
+				workers5.add(new Tutor("Sirgay", iss5));
 			}
 			else if(i%5==0) {
-				cashiers.add(new Cashier("Senym", Integer.toString(num*2+i), crs.get(i)));
-				workers1.add(new Tutor("Gamad", Integer.toString(num*3+i)));
-				workers2.add(new Tutor("Gulili", Integer.toString(num*4+i)));
-				workers3.add(new Tutor("Ofek", Integer.toString(num*5+i)));
-				workers4.add(new Tutor("Dani", Integer.toString(num*3+i*9)));
-				workers5.add(new Tutor("Daniel", Integer.toString(num*4+i*5)));
+				cashiers.add(new Cashier("Senym", cra, crs.get(i)));
+				workers1.add(new Tutor("Gamad", iss1));
+				workers2.add(new Tutor("Gulili", iss2));
+				workers3.add(new Tutor("Ofek", iss3));
+				workers4.add(new Tutor("Dani", iss4));
+				workers5.add(new Tutor("Daniel", iss5));
 			}
 			else if(i%7==0) {
-				cashiers.add(new Cashier("Perez", Integer.toString(num*2+i), crs.get(i)));
-				workers1.add(new Tutor("Samwell", Integer.toString(num*3+i)));
-				workers2.add(new Tutor("Vlad", Integer.toString(num*4+i)));
-				workers3.add(new Tutor("Hila", Integer.toString(num*5+i)));
-				workers4.add(new Tutor("Eden", Integer.toString(num*3+i*9)));
-				workers5.add(new Tutor("Alex", Integer.toString(num*4+i*5)));
+				cashiers.add(new Cashier("Perez", cra, crs.get(i)));
+				workers1.add(new Tutor("Samwell", iss1));
+				workers2.add(new Tutor("Vlad", iss2));
+				workers3.add(new Tutor("Hila", iss3));
+				workers4.add(new Tutor("Eden", iss4));
+				workers5.add(new Tutor("Alex", iss5));
 			}
 			else {
-				cashiers.add(new Cashier("Miri", Integer.toString(num*2+i), crs.get(i)));
-				workers1.add(new Tutor("Nastya", Integer.toString(num*3+i)));
-				workers2.add(new Tutor("Pizi", Integer.toString(num*4+i)));
-				workers3.add(new Tutor("Katya", Integer.toString(num*5+i)));
-				workers4.add(new Tutor("Ahmed", Integer.toString(num*3+i*9)));
-				workers5.add(new Tutor("Shalev", Integer.toString(num*4+i*5)));
+				cashiers.add(new Cashier("Miri", cra, crs.get(i)));
+				workers1.add(new Tutor("Nastya", iss1));
+				workers2.add(new Tutor("Pizi", iss2));
+				workers3.add(new Tutor("Katya", iss3));
+				workers4.add(new Tutor("Ahmed", iss4));
+				workers5.add(new Tutor("Shalev", iss5));
 			}
 		}
-		ItemStoreSection iss1 = new ItemStoreSection(6850, workers1, "Bed Room Item Section", bdi);
-		ItemStoreSection iss2 = new ItemStoreSection(6850, workers2, "Garden Item Section", gi);
-		ItemStoreSection iss3 = new ItemStoreSection(6850, workers3, "Kitchen Item Section", ki);
-		ItemStoreSection iss4 = new ItemStoreSection(6850, workers4, "Office Item Section", oi);
-		ItemStoreSection iss5 = new ItemStoreSection(6850, workers5, "Tool Item Section", ti);
-		CashRegisterArea cra = new CashRegisterArea(crs, 1220);
+		iss1 = new ItemStoreSection(6850, workers1, "Bed Room Item Section", bdi);
+		iss2 = new ItemStoreSection(6850, workers2, "Garden Item Section", gi);
+		iss3 = new ItemStoreSection(6850, workers3, "Kitchen Item Section", ki);
+		iss4 = new ItemStoreSection(6850, workers4, "Office Item Section", oi);
+		iss5 = new ItemStoreSection(6850, workers5, "Tool Item Section", ti);
+		cra = new CashRegisterArea(crs, 1220);
 		CashRegister cr2 = new CashRegister(Integer.toString(1450));
-		Cashier c = new Cashier("Sam", Integer.toString(num*2+1450*3), cr2);
+		Cashier c = new Cashier("Sam", r, cr2);
 		cashiers2.add(c);
-		Resturant r = new Resturant(680, cashiers2 , cr2);
+		r = new Resturant(680, cashiers2 , cr2);
 		s[0] = iss1;
 		s[1] = iss2;
 		s[2] = iss3;

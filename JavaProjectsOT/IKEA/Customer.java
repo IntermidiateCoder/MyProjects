@@ -1,17 +1,23 @@
 package IKEA;
 
+import java.util.ArrayList;
 import java.util.regex.*;
 
+import IKEA.Item.Item;
+
 public class Customer {
+	private ArrayList<Item> cart;
+	private String name;
+	private double balance;
+	private String phoneNumber;
+	
 	public Customer(String name, double balance, String pn) {
 		if(Customer.isPhoneNumReal(pn))
 			this.setPhoneNumber(pn);
 		this.name = name;
 		this.balance = balance;
+		this.cart = new ArrayList<Item>();
 	}
-	private String name;
-	private double balance;
-	private String phoneNumber;
 	public String getName() {
 		return name;
 	}

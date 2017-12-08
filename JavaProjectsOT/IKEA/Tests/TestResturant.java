@@ -18,7 +18,7 @@ public class TestResturant {
 	private CashRegister cr = new CashRegister("1234");
 	@Before
 	public void setUp() throws Exception {
-		c = new Cashier("Helen", "12365", cr);
+		c = new Cashier("Helen", r, cr);
 		r = new Resturant(120);
 		r.getWorkers().add(c);
 	}

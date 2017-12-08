@@ -1,21 +1,23 @@
 package IKEA.Worker;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+
+import IKEA.Sections.Section;
 public class Worker {
 	private LocalDate startingDate;
 	private String name;
-	private String section;
+	private Section section;
 	private double salary;
 	// the rate salary increases.
 	private double incRate;
-	public Worker(LocalDate startingDate, String name, String section, double salary) {
+	public Worker(LocalDate startingDate, String name, Section section, double salary) {
 		this.startingDate = startingDate;
 		this.name = name;
 		this.section = section;
 		this.salary = salary;
 		this.incRate = 1.02;
 	}
-	public Worker(String name, String section, double salary) {
+	public Worker(String name, Section section, double salary) {
 		this.startingDate = LocalDate.now();
 		this.name = name;
 		this.section = section;
@@ -42,10 +44,10 @@ public class Worker {
 		return "What do you need?";
 	}
 	
-	public String getSection() {
+	public Section getSection() {
 		return section;
 	}
-	public void setSection(String section) {
+	public void setSection(Section section) {
 		this.section = section;
 	}
 	public double getSalary() {

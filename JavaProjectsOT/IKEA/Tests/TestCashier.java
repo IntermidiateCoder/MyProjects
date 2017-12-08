@@ -18,11 +18,11 @@ public class TestCashier {
 	@Before
 	public void setUp() throws Exception {
 		c1 = new Cashier(LocalDate.of(2016, LocalDate.now().getMonth(), 
-				LocalDate.now().getDayOfMonth()), "tamir", "000", null);
-		c2 = new Cashier(LocalDate.of(2000, 10, 20), "Ofek", "001", null);
-		c3 = new Cashier(LocalDate.of(2005, 9, 5), "Dani Svi", "002", null);
-		c4 = new Cashier("Ido", "003", null);
-		c5 = new Cashier(LocalDate.of(2019, 11, 22), "Almog", "004", null);
+				LocalDate.now().getDayOfMonth()), "tamir", null, null);
+		c2 = new Cashier(LocalDate.of(2000, 10, 20), "Ofek", null, null);
+		c3 = new Cashier(LocalDate.of(2005, 9, 5), "Dani Svi", null, null);
+		c4 = new Cashier("Ido", null, null);
+		c5 = new Cashier(LocalDate.of(2019, 11, 22), "Almog", null, null);
 	}
 
 	@Test

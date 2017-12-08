@@ -18,11 +18,11 @@ public class TestTutor {
 	@Before
 	public void setUp() throws Exception {
 		c1 = new Tutor(LocalDate.of(2016, LocalDate.now().getMonth(), 
-				LocalDate.now().getDayOfMonth()), "tamir", "Section B");
-		c2 = new Tutor(LocalDate.of(2000, 10, 20), "name2", "Kitchen Section");
-		c3 = new Tutor(LocalDate.of(2005, 9, 5), "name3", "Sales Department");
-		c4 = new Tutor("name4", "4");
-		c5 = new Tutor(LocalDate.of(2019, 11, 22), "name5", "5");
+				LocalDate.now().getDayOfMonth()), "tamir", null);
+		c2 = new Tutor(LocalDate.of(2000, 10, 20), "name2", null);
+		c3 = new Tutor(LocalDate.of(2005, 9, 5), "name3", null);
+		c4 = new Tutor("name4", null);
+		c5 = new Tutor(LocalDate.of(2019, 11, 22), "name5", null);
 	}
 
 	@Test

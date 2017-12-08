@@ -22,6 +22,9 @@ public class IKEAStore {
 		IKEAStore.balance += amt;
 	}
 	public static void order(Item orderedItem) {
-		orderedItem.addInStock(25);
+		orderedItem.addInStock(5);
+	}
+	public static void order(Item orderedItem, int amt) {
+		orderedItem.addInStock(amt);
 	}
 }

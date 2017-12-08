@@ -18,11 +18,11 @@ public class TestSalesMan {
 		@Before
 		public void setUp() throws Exception {
 			s1 = new SalesMan(LocalDate.of(2016, LocalDate.now().getMonth(), 
-					LocalDate.now().getDayOfMonth()), "tamir");
-			s2 = new SalesMan(LocalDate.of(2000, 10, 20), "Ofek");
-			s3 = new SalesMan(LocalDate.of(2005, 9, 5), "Dani Svi");
-			s4 = new SalesMan("Ido");
-			s5 = new SalesMan(LocalDate.of(2019, 11, 22), "Almog");
+					LocalDate.now().getDayOfMonth()), "tamir", null);
+			s2 = new SalesMan(LocalDate.of(2000, 10, 20), "Ofek", null);
+			s3 = new SalesMan(LocalDate.of(2005, 9, 5), "Dani Svi", null);
+			s4 = new SalesMan("Ido", null);
+			s5 = new SalesMan(LocalDate.of(2019, 11, 22), "Almog", null);
 		}
 
 		@Test

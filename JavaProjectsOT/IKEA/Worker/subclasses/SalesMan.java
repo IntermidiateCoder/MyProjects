@@ -3,16 +3,17 @@ package IKEA.Worker.subclasses;
 import java.time.LocalDate;
 
 import IKEA.Customer;
+import IKEA.Sections.Section;
 import IKEA.Worker.Worker;
 
 public class SalesMan extends Worker {
 
-	public SalesMan(String name) {
-		super(name, "Sales Department", 12500);
+	public SalesMan(String name, Section section) {
+		super(name, section, 12500);
 		this.setIncRate(1.2);
 	}
-	public SalesMan(LocalDate startingDate, String name) {
-		super(startingDate, name, "Sales Department", 12500);
+	public SalesMan(LocalDate startingDate, String name, Section section) {
+		super(startingDate, name, section, 12500);
 		this.setIncRate(1.2);
 	}
 	public void convinceToVisit(String phoneNumber) { // DONE
