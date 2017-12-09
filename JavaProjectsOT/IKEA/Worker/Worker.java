@@ -6,7 +6,7 @@ import IKEA.Sections.Section;
 public class Worker {
 	private LocalDate startingDate;
 	private String name;
-	private Section section;
+	protected Section section;
 	private double salary;
 	// the rate salary increases.
 	private double incRate;

@@ -4,16 +4,16 @@ import IKEA.Item.Item;
 import IKEA.Sections.Section;
 
 public class IKEAStore {
-	private Section[] sections;
+	private static Section[] sections;
 	private static double balance;
 	public IKEAStore(Section[] s) {
-		this.sections = s;
+		IKEAStore.sections = s;
 	}
-	public Section[] getSections() {
+	public static Section[] getSections() {
 		return sections;
 	}
-	public void setSections(Section[] sections) {
-		this.sections = sections;
+	public static void setSections(Section[] sections) {
+		IKEAStore.sections = sections;
 	}
 	public static double getBalance() {
 		return balance;

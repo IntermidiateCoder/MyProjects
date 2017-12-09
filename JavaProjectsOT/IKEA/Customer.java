@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.regex.*;
 
 import IKEA.Item.Item;
+import IKEA.Sections.Section;
+import IKEA.Worker.Worker;
+import IKEA.Worker.subclasses.Tutor;
 
 public class Customer {
 	private ArrayList<Item> cart;
@@ -55,6 +58,30 @@ public class Customer {
 	
 	public void incBalance(int amount) { 
 		this.setBalance(this.getBalance() + amount);
+	}
+	
+	public void addToCart(String itemID) {
+		String prefix = "" +  itemID.charAt(0);
+		for(Section s : IKEAStore.getSections()) {
+			if(s.getName().startsWith(prefix)) {
+				for(Worker w : s.getWorkers())
+					if(w instanceof Tutor)
+						((Tutor) w).giveCustomer(itemID);
+			}
+		}
+	
+	}
+	
+	public void addToCart(String itemID, int amt) {
+		String prefix = "" +  itemID.charAt(0);
+		for(Section s : IKEAStore.getSections()) {
+			if(s.getName().startsWith(prefix)) {
+				for(Worker w : s.getWorkers())
+					if(w instanceof Tutor)
+						((Tutor) w).giveCustomer(itemID, amt);
+			}
+		}
+	
 	}
 	
 	@Override

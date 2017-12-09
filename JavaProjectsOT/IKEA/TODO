@@ -1,7 +1,6 @@
 
-Customer:
-	1. addToCart(String itemID) // void: adds to cart an item by item ID
-	2. addToCart(String itemID, int amt) // void: adds to cart an item by item ID times the amt (amt > 1)
+TestCustomer:
+	testAddToCart
 	
 
 

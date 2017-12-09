@@ -31,7 +31,7 @@ public class Tutor extends Worker{
 		return i;
 	}
 	private Item findItem(String itemID) {
-		ItemStoreSection iss = (ItemStoreSection) this.getSection();
+		ItemStoreSection iss = (ItemStoreSection) section;
 		for(Item i : iss.getItems()) 
 			if(i.getItemID().equals(itemID))
 				return i;
