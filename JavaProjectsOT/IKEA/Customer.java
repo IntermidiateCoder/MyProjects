@@ -66,7 +66,7 @@ public class Customer {
 			if(s.getName().startsWith(prefix)) {
 				for(Worker w : s.getWorkers())
 					if(w instanceof Tutor)
-						((Tutor) w).giveCustomer(itemID);
+						cart.add(((Tutor) w).giveCustomer(itemID));
 			}
 		}
 	
@@ -78,7 +78,7 @@ public class Customer {
 			if(s.getName().startsWith(prefix)) {
 				for(Worker w : s.getWorkers())
 					if(w instanceof Tutor)
-						((Tutor) w).giveCustomer(itemID, amt);
+						cart.add(((Tutor) w).giveCustomer(itemID, amt));
 			}
 		}
 	
