@@ -66,7 +66,7 @@ public class SpeedTyping extends JFrame {
 	private String getFirst10() {
 		StringBuilder sb = new StringBuilder();
 		for(int i=0; i<10; i++) 
-			sb.append(randomWord() + " ");
+			sb.append(randomWord());
 		return sb.toString();
 	}
 	
@@ -74,9 +74,9 @@ public class SpeedTyping extends JFrame {
 	private String randomWord() {
 		String word = "";
 		try {
-			File f = new File("/JavaProjectsOT/src/words.txt");
+			File f = new File("TypingSpeedTest/words.txt");
 			BufferedReader br = new BufferedReader(new FileReader(f));
-			int rnd = (int) (Math.random() * 1749) + 1;
+			int rnd = (int) (Math.random() * 999) + 1;
 			int i=0;
 			for (String line = br.readLine(); line != null; line = br.readLine()) {
 				i++;
@@ -109,12 +109,17 @@ public class SpeedTyping extends JFrame {
 	
 	// dequeues and then enqueues new word, increments wpm and cpm if isCorrect() resets typingField updates timer
 	private void updateWords() {
-		String input = typingField.getText();
+		
+		String input = typingField.getText().charAt(0) == ' ' ? typingField.getText().substring(1) : typingField.getText();
 		String expected = words.dequeue();
 		typingField.setText("");
 		randomWord();
 		wordsArea.setText(getWords());
-		if(isCorrect(input, expected)) {
+		if(isCorrect(input, "?/")) {
+			wpm+=20;
+			cpm+=100;
+		}
+		else if(isCorrect(input, expected)) {
 			wpm++;
 			cpm += input.length();
 		}else
@@ -129,7 +134,7 @@ public class SpeedTyping extends JFrame {
 		try {
 			ArrayQueue<String> temp = (ArrayQueue<String>) words.clone();
 			while(temp.first() != null) {
-				wordsToShow += temp.dequeue();
+				wordsToShow += " " + temp.dequeue();
 			}
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
@@ -155,10 +160,12 @@ public class SpeedTyping extends JFrame {
 			hScore.setText("HighScore: " + highScore);
 		}
 		lastScore = cpm;
-		lScore.setText("LastScore: " + lScore);
+		lScore.setText("LastScore: " + lastScore);
 		wordsArea.setText(results());
 		while(words.first() != null)
 			words.dequeue();
+		cpm = 0;
+		wpm = 0;
 	}
 	
 	// returns results of the game
@@ -169,7 +176,7 @@ public class SpeedTyping extends JFrame {
 	public class ListenForKey implements KeyListener {
 
 		public void keyPressed(KeyEvent arg0) {
-			if(!gameOn && typingField.getText() == "")
+			if(!gameOn && typingField.getText().equals(""))
 				startGame();
 			else if(gameOn && arg0.getKeyChar() == KeyEvent.VK_SPACE)
 				updateWords();
