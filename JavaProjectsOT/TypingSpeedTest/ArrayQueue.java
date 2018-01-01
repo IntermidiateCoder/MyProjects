@@ -24,7 +24,7 @@ public class ArrayQueue<E> implements Queue<E> {
 		data[avail] = e;
 		sz++;
 	}
-
+ 
 	@Override
 	public E first() {
 		if(isEmpty()) return null;
